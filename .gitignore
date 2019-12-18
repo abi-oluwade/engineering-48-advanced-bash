@@ -1,0 +1,3 @@
+secret_ssh_key
+.vagrant
+secret* # the star means it will ignore everything that has secret at the start of the file
