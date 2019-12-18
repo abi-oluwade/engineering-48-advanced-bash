@@ -26,6 +26,10 @@ so now 'cat directory.txt' will act like ls
 (> = redirects STDOUT to what you assign it to)
 
 (|) lets you pipe together commands.
+example: cat words.txt | grep -v a | sort -r will do cat, grep and sort. the minus -r will do a reverse sort.
+example : cat words.txt | grep li | sort -r will do same as above but look for 'li' and not sort.
+
+
 ````
 $ls missing_directory
 > ls: cannot access 'missing_directory': No such file or directory
@@ -39,6 +43,17 @@ grep = get regular expressions. we can use it to search, it can search files and
 eg 'cat example.txt | grep text' will search the example.txt file and look for the
 word text throughout it.
 grep -v will filter out files that DO have the text string in them.
+
+## looking at what the running processes are
+- a bit like task manager - see what processes are running
+ top- will show us all the running processes in real time
+ ps- snapshot of the current processes
+ ps aux- gives as a full list of processes, usually used with grep to find exactly what we are looking for.
+ ps aux | grep = useful for debugging and finding specific processes.
+ pid = process identity numbers
+ sleep 120 &- this makes the processes run in the background.
+kill [pid]- will kill the process
+kill -9 [pid] - will force kill the process
 
 ## concepts
 
